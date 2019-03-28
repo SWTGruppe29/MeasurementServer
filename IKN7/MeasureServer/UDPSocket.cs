@@ -36,7 +36,7 @@ namespace MeasurementServer
                     var uptimeText = File.ReadAllText("/proc/uptime");
                     string[] uptimes = uptimeText.Split(' ');
                     Server.Connect(IPAddress.Parse("10.0.0.2"), 9000);
-                    SendText(uptimes[0]);
+					SendText("Server uptime in seconds: " + uptimes[0]);
 					Server.Close();
                     break;
 
